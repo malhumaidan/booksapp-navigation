@@ -133,7 +133,11 @@ More on `ListView.builder()` can be found [here (flutter documentation)](https:/
 
 Now lets make the ```ListView.builder()``` return ```ListTile()``` widgets and display our `Books` that we stored in the list👇.<br>
 
-<img width="642" alt="Screen Shot 2023-06-21 at 4 00 06 PM" src="https://github.com/malhumaidan/booksapp-navigation/assets/89436547/81e6ca84-a95d-4bef-ae1b-c159d24cca96">
+
+<img width="442" alt="Screen Shot 2023-06-21 at 4 00 06 PM" src="https://github.com/malhumaidan/booksapp-navigation/assets/89436547/81e6ca84-a95d-4bef-ae1b-c159d24cca96"> 
+
+
+We should now see our books being rendered on the sceen perfectly👏👏👏.
 
 Lets review the code above:<br>
 we replaced `null` with `ListTile()` widget.
