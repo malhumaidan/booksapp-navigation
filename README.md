@@ -74,7 +74,7 @@ the result should be something like this👇
 <img width="532" alt="Screen Shot 2023-06-21 at 1 12 51 PM" src="https://github.com/malhumaidan/booksapp-navigation/assets/89436547/ff5f25a2-1c34-4e65-891c-425dbd059c68">
 
 As we can see, there is an error saying that the object ```Book()``` is not defined, this means that we have to import it from our ```Book.dart``` file we created in step 1<br>
-To solve this issue, CLICK on the word ```Book``` then click on the little yellow lamp and choose ```Import library 'Book.dart'```.<br>
+To solve this issue, CLICK on the word ```Book``` then click on the little yellow bulb and choose ```Import library 'Book.dart'```.<br>
 look at the screenshot below👇
 <br>
 <br>
@@ -143,4 +143,69 @@ Lets review the code above:<br>
 we replaced `null` with `ListTile()` widget.
 `ListTile()` widget has properties ready and we just have to use them, and those properties are `leading` `title` `subtitle` `trailing` as shown above.<br>
 For now we will leave the `IconButton()`'s onPressed property empty in the `trailing`.<br>
+
+
+## Step 3 (BooksDetailPage.dart)
+
+#### Step 3.1
+- Like what we did in step 1, lets create new file inside the `lib` folder in our flutter project and name it `BooksDetailPage.dart`👇.<br>
+
+<img width="797" alt="Screen Shot 2023-06-21 at 8 09 14 PM" src="https://github.com/malhumaidan/booksapp-navigation/assets/89436547/2b0960a6-02c3-4c6f-81d7-a6a25969de39">
+
+Simply, we created a file named `BooksDetailPage.dart` and inside it a `Stateless Widget`<br>
+<br>
+Lets name it `BooksDetailPage`👇.<br>
+
+<img width="529" alt="Screen Shot 2023-06-21 at 8 17 14 PM" src="https://github.com/malhumaidan/booksapp-navigation/assets/89436547/1908f32b-54c5-472a-a9aa-568950f3e34e"> <br>
+
+Now instead of returning `const Placeholder()`, lets actually return a page👇.<br>
+
+<img width="603" alt="Screen Shot 2023-06-21 at 8 26 39 PM" src="https://github.com/malhumaidan/booksapp-navigation/assets/89436547/7dfb9ceb-0020-42ba-88ec-1b4559b03ac5"> <br>
+
+Comments:<br>
+we now have a page that is ready to display in information we provide, so let now make some changes to it and make it return the detail of our books👇.<br>
+
+
+<img width="611" alt="Screen Shot 2023-06-21 at 8 31 50 PM" src="https://github.com/malhumaidan/booksapp-navigation/assets/89436547/4ed8f3f8-5087-4fcd-815d-d5b0e6b8a72a"> <br>
+
+Lets review what we did here, we defined a `final` variable of type `Book` and named it `book`. Also, we said that this variable is required to be passed by anyone who wants to use this widget, how did we say that?? by writing `required this.book` next to `super.key` in the constructor on line 7.<br>
+Note:<br>
+if like me, `Book` is in white, we can CLICK on it then click on the yellow bulb and import it by choosing `Import library 'Book.dart', this should turn it to green.<br>
+
+Your code should look like this by now, without any errors too.<br>
+
+<img width="579" alt="Screen Shot 2023-06-21 at 8 40 51 PM" src="https://github.com/malhumaidan/booksapp-navigation/assets/89436547/ab6206d1-661a-4bb6-b799-bd6620615897">
+
+#### Step 3.1
+
+Now lets replace the things we hard-coded to the page to be dynamic and change everytime the the variable `book` change👇.<br>
+
+<img width="664" alt="Screen Shot 2023-06-21 at 8 47 16 PM" src="https://github.com/malhumaidan/booksapp-navigation/assets/89436547/a61e9797-e515-4480-a523-fbcf436ca547">
+
+
+#### Step 3.2 (Final Step🎉🎉🎉)
+This is the final step, first check if everything is the same as the code above before continuing to this step.<br>
+
+Lets go back to our `main.dart` file and go to the `onPressed` property that we left empty earlier and paste the code below inside the `{}`👇.<br>
+
+```dart
+Navigator.push(
+    context,
+        MaterialPageRoute(
+            builder: (context) {
+                return BooksDetailPage(
+                    book: books[index],
+                      );
+                    },
+                ),
+            );
+
+```
+<br>
+
+Note:<br>
+If `BooksDetailPage` is in white, you know what to do, CLICK on it then click on the yellow bulb and import it by choosing `Import library 'BooksDetailPage.dart'
+
+## Now save the file and try to click on the arrow and see what happens 👏👏👏👏
+
 
