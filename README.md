@@ -125,4 +125,4 @@ Lets see this in action👇.<br>
 <br>
 Lets review the code above:<br>
 ```itemCount``` takes a number so we will give it ```books.length``` which is a number.<br>
-```itemBuilder``` takes a nameless/anonymous function with two parameters ```context``` and ```index``` so, the function should be like this```(context,index){}```.<br>
+```itemBuilder``` takes a nameless/anonymous function with two parameters ```context``` and ```index``` so, the function should be like this```(context,index){}``` More on `ListView.builder()` can be found [here (flutter documentation)](https://api.flutter.dev/flutter/widgets/ListView-class.html#widgets.ListView.2) . <br>
