@@ -127,3 +127,16 @@ Lets review the code above:<br>
 ```itemCount``` takes a number so we will give it ```books.length``` which is a number.<br>
 ```itemBuilder``` takes a nameless/anonymous function with two parameters ```context``` and ```index``` so, the function should be like this```(context,index){}```.<br>
 More on `ListView.builder()` can be found [here (flutter documentation)](https://api.flutter.dev/flutter/widgets/ListView-class.html#widgets.ListView.2) . <br>
+
+
+#### Step 2.5
+
+Now lets make the ```ListView.builder()``` return ```ListTile()``` widgets and display our `Books` that we stored in the list👇.<br>
+
+<img width="642" alt="Screen Shot 2023-06-21 at 4 00 06 PM" src="https://github.com/malhumaidan/booksapp-navigation/assets/89436547/81e6ca84-a95d-4bef-ae1b-c159d24cca96">
+
+Lets review the code above:<br>
+we replaced `null` with `ListTile()` widget.
+`ListTile()` widget has properties ready and we just have to use them, and those properties are `leading` `title` `subtitle` `trailing` as shown above.<br>
+For now we will leave the `IconButton()`'s onPressed property empty in the `trailing`.<br>
+
